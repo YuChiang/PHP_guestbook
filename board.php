@@ -14,6 +14,8 @@
     </head>
     <body>
         <a href="post.php">Post!</a><br>
+        <a href="logout.php">Logout</a><br>
+
         <?php 
             $query = "SELECT `account`, `subject`, `content` FROM `rakuda_yuchiang`.`message`";
             $result = mysql_query($query);

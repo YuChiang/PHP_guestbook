@@ -11,7 +11,7 @@
     if(!$link){
     	die('Could not connect: ' . mysql_error() . '<br/>');
     }else{
-		echo 'Connected successfully.<br/>';
+		// echo 'Connected successfully.<br/>';
     }
 
 	//Connecting database by UTF8
