@@ -1,4 +1,6 @@
-<?php
-	$db_server = 'mysql:dbname=rakuda_yuchiang; host=127.0.0.1';
+<?php 
+
+	$db_host = '127.0.0.1';
+	$db_name = 'rakuda_yuchiang';
 	$db_user = 'rakuda';
-	$db_password = 'QzcE2BXsyp6nU3MD';
+	$db_passwd = 'QzcE2BXsyp6nU3MD';
