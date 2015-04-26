@@ -15,16 +15,15 @@
     <body>
         <a href="post.php">Post!</a><br>
         <?php 
-            $query = "SELECT `account`, `content` FROM `rakuda_yuchiang`.`message`";
+            $query = "SELECT `account`, `subject`, `content` FROM `rakuda_yuchiang`.`message`";
             $result = mysql_query($query);
-
-            while(list($account, $content) = mysql_fetch_array($result)){ 
-        ?>
-                <font style="background-color:#CCFFFF ">作者：</span>
-                <?php echo $account ?><br>
-                <font style="background-color:#9999FF">標題：</span>
-                <?php echo $content ?><br>
-        <?php 
+            echo "<hr/>";
+            while(list($account, $subject, $content) = mysql_fetch_array($result)){ 
+        
+                echo "Account: ".$account."<br/>";
+                echo "Subject: ".$subject."<br/>";
+                echo "Content: ".$account."<hr/>";
+         
             }
         ?>
     </body>
