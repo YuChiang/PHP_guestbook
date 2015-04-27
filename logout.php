@@ -2,3 +2,5 @@
 	//將session清空
 	unset($_SESSION['usr']);
 	header("Location: index.php");
+    exit();
+	

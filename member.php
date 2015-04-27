@@ -1,7 +1,7 @@
 
 <?php session_start(); 
     include("mysql_connect.php");
-    echo '<a href="logout.php">Logout</a>        ';
+    echo '<a href="logout.php">Logout</a>&nbsp;&nbsp;';
 
 //prevent from some nobody
     if(ISSET($_SESSION['usr']))
@@ -17,5 +17,6 @@
     else
     {
         header("Location: index.php");
+        exit();
+
     }
-?>

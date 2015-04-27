@@ -5,7 +5,6 @@
 // ===================
 	// database setting
 	// Connecting database
-
 	include ("info.php");
 	$link = mysql_connect($db_host, $db_user, $db_passwd);
     if(!$link){
@@ -22,7 +21,3 @@
 	if(!$db_selected){
 		die('Could not select database.<br/>' . mysql_error());
 	}
-
-
-?>
-	

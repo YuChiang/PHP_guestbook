@@ -12,22 +12,16 @@
 
 	//Selecting data from database.
 	$sql = "SELECT * FROM `login` where `usr` = '{$id}'";
-//改
 	$result = mysql_query($sql);
 	$row = mysql_fetch_row($result);
 
-	//	Determine if this is a legal ID
 	if(ISSET($id) && ISSET($pw)){
-		
-		if(md5($row[2]) === $pw)
-		{
+		if(md5($row[2]) === $pw){
 	        $_SESSION['usr'] = $id;
 			header("Location: member.php");
 			exit();
 		}
-	
-		else
-		{
+		else{
 			header("Location: index.php");
 			exit();
 		}		

@@ -1,9 +1,10 @@
 <?php
-    include("mysql_connect.php");
-
     session_start();
+    include("mysql_connect.php");
     if($_SESSION['usr'] == null){
         header("Location:index.php");
+        exit();
+        
     }
 ?>
 
@@ -13,7 +14,7 @@
         <title>Guestbook</title>
     </head>
     <body>
-        <a href="post.php">Post!</a><br>
+        <a href="post.php">Post!</a>&nbsp;&nbsp;
         <a href="logout.php">Logout</a><br>
 
         <?php 
@@ -24,9 +25,10 @@
         
                 echo "Account: ".$account."<br/>";
                 echo "Subject: ".$subject."<br/>";
-                echo "Content: ".$account."<hr/>";
+                echo "Content: ".$content."<hr/>";
          
             }
+            echo "共".mysql_num_rows($result)."筆";
         ?>
     </body>
 </html>
