@@ -5,8 +5,8 @@
     mysql_query("SET NAMES utf8");
 
 //prevent from some nobody
-    include("is_member.php");
-    is_member();
+    include("is_login.php");
+    is_login();
 
     if(ISSET($_SESSION['usr']))
     {

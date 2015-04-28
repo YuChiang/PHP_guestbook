@@ -12,11 +12,12 @@
 	$pw = md5($_POST['pw']);
 
 	//Selecting data from database.
+// 改prepare
 	$sql = "SELECT * FROM `login` where `usr` = '{$id}'";
 	$result = mysql_query($sql);
 	$row = mysql_fetch_row($result);
 
-	if(ISSET($id) && ISSET($pw)){
+	if(isset($id) && isset($pw)){
 		if(md5($row[2]) === $pw){
 	        $_SESSION['usr'] = $id;
 			header("Location: member.php");

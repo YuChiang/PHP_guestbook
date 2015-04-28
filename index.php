@@ -6,16 +6,20 @@
 <body style="font-family:Verdana;">
 	
 	<h1 >Login Page</h1>
+	<?php include "connect.php"; ?>
+	<?php if(!isset($_SESSION[usr])){ ?>
+		<form name="form" method="post" action="connect.php">
+		
+			<span >Account</span><br/><input type="text" name="id" /> <br>
+			<span >Password<br/><input type="password" name="pw" /> <br>
 
-	<form name="form" method="post" action="connect.php">
-	
-		<span >Account</span><br/><input type="text" name="id" /> <br>
-		<span >Password<br/><input type="password" name="pw" /> <br>
+			<input type="submit" name="button" value="登入" />&nbsp;&nbsp;
 
-		<input type="submit" name="button" value="登入" />&nbsp;&nbsp;
+			<a href="register.php">Register</a>
 
-		<a href="register.php">Register</a>
-
-	</form>
+		</form>
+	<?php }else{ 
+		header("Location: member.php");
+	} ?>
 </body>
 </html>

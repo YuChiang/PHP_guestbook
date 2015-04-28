@@ -3,7 +3,7 @@
     include("mysql_connect.php");
 //prevent from some nobody
     include("is_member.php");
-    is_member();
+    login();
 
 ?>
 

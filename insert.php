@@ -1,8 +1,8 @@
 <?php
 session_start();
 //prevent from some nobody
-    include("is_member.php");
-    is_member();
+    include("is_login.php");
+    login();
 ?>
 <?php
 	$acc = $_SESSION["usr"];
