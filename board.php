@@ -1,11 +1,10 @@
 <?php
     session_start();
     include("mysql_connect.php");
-    if($_SESSION['usr'] == null){
-        header("Location:index.php");
-        exit();
-        
-    }
+//prevent from some nobody
+    include("is_member.php");
+    is_member();
+
 ?>
 
 <html>

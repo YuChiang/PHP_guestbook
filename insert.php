@@ -1,16 +1,15 @@
 <?php
 session_start();
-if($_SESSION["usr"] != true){
-	header("Location:index.php");
-	$_SESSION["msg"] = "請登入";
-	//echo '<meta http-equiv=REFRESH CONTENT=1;url=index.php>';
-}
+//prevent from some nobody
+    include("is_member.php");
+    is_member();
 ?>
 <?php
 	$acc = $_SESSION["usr"];
 	$sub = $_POST["subject"];
 	$con = $_POST["content"];
 	//和資料庫連線檢查
+	
 	include("mysql_connect.php");
 	if(isset($con)){
 		// $sql = "insert into `rakuda_yuchiang`.`message` (`account`,`content`) values ('{$acc}','{$con}');";

@@ -1,10 +1,8 @@
 <?php
 	session_start();
-	if($_SESSION['usr'] == null){
-		header("Location:index.php");
-        exit();
-		
-	}
+//prevent from some nobody
+    include("is_member.php");
+    is_member();
 
 ?>
 

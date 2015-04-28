@@ -9,7 +9,7 @@
 
 	<form name="form" method="post" action="connect.php">
 	
-		<span >User</span><br/><input type="text" name="id" /> <br>
+		<span >Account</span><br/><input type="text" name="id" /> <br>
 		<span >Password<br/><input type="password" name="pw" /> <br>
 
 		<input type="submit" name="button" value="登入" />&nbsp;&nbsp;
